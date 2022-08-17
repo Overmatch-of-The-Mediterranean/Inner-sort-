@@ -1,6 +1,9 @@
 function InsertSort(arr) {
+  // 从数组中第一个数开始，逐个与前面排列好的数比较，从小到大排列
   for (let i = 1; i < arr.length; i++) {
+    // 从右往左比较
     for (let j = i - 1; j >= 0; j--) {
+      // 这里的arr[j + 1]相当于a[i]
       if (arr[j] > arr[j + 1]) {
         [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
       } else {
